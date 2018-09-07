@@ -1,0 +1,76 @@
+.pure-color{
+  -fx-background-color: #c3c4c4;
+}
+
+.linear{
+ -fx-background-color:
+    #e6e6e6,
+    linear-gradient(#c3c4c4 30%, #e6e6e6 100%);
+}
+
+.radial-only{
+ -fx-background-color:
+     #e6e6e6,
+     radial-gradient(center 50% -35%, radius 200%, #c3c4c4 15%, #e6e6e6 45%);
+}
+
+.linear-and-radial{
+ -fx-background-color:
+    #e6e6e6,
+    linear-gradient(#c3c4c4 30%, #e6e6e6 100%),
+    radial-gradient(center 50% -35%, radius 200%, #c3c4c4 15%, #e6e6e6 45%);
+}
+
+.radius-10{
+ -fx-background-color:
+    #e6e6e6,
+    linear-gradient(#c3c4c4 30%, #e6e6e6 100%),
+    radial-gradient(center 50% -35%, radius 200%, #c3c4c4 15%, #e6e6e6 45%);
+ -fx-background-radius: 10;
+}
+
+.radius-90{
+ -fx-background-color:
+    #e6e6e6,
+    linear-gradient(#c3c4c4 30%, #e6e6e6 100%),
+    radial-gradient(center 50% -35%, radius 200%, #c3c4c4 15%, #e6e6e6 45%);
+ -fx-background-radius: 90;
+}
+
+.dropshadow-three-pass-box{
+ -fx-background-color:
+    #e6e6e6,
+    linear-gradient(#c3c4c4 30%, #e6e6e6 100%),
+    radial-gradient(center 50% -35%, radius 200%, #c3c4c4 15%, #e6e6e6 45%);
+ -fx-background-radius: 10;
+ -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
+}
+
+.dropshadow-one-pass-box{
+ -fx-background-color:
+    #e6e6e6,
+    linear-gradient(#c3c4c4 30%, #e6e6e6 100%),
+    radial-gradient(center 50% -35%, radius 200%, #c3c4c4 15%, #e6e6e6 45%);
+ -fx-background-radius: 10;
+ -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
+}
+
+.glass-grey-shadow {
+    -fx-background-color:
+        #c3c4c4,
+        linear-gradient(red 30%, orange 100%);
+        //radial-gradient(center 50% -40%, radius 50%, #c3c4c4 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,4,4;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 1 );
+};
+.glass-grey {
+    -fx-background-color:
+        #c3c4c4,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+};

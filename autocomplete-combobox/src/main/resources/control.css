@@ -1,0 +1,3 @@
+.autofill-text {
+    -fx-skin: "se.mbaeumer.javafxlab..AutoFillTextBoxSkin";
+}
