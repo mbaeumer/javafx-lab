@@ -41,7 +41,7 @@ public class DemoApp extends Application {
 
     public void initLayout() {
         this.createGeneralFlowPane();
-        this.createButton();
+        this.createButtons();
         this.createLabel();
         this.createTraditionalCheckBox();
         this.createLambdaCheckBox();
@@ -55,7 +55,7 @@ public class DemoApp extends Application {
         this.root.getChildren().add(this.flowGeneral);
     }
 
-    private void createButton(){
+    private void createButtons(){
         this.buttonTraditional = new Button("Example button with traditional event handler");
 
         this.buttonTraditional.setOnAction(new EventHandler<ActionEvent>() {
@@ -66,7 +66,6 @@ public class DemoApp extends Application {
         });
 
         this.buttonNew = new Button("Example button with lambda event handler");
-        //this.buttonNew.setOnAction(actionEvent -> {label.setText("Action performed in the lambda");});
         this.buttonNew.setOnAction(actionEvent -> label.setText("Action performed in the lambda"));
         this.buttonNew.setOnAction(this::handleButtonPressed);
         this.flowGeneral.getChildren().addAll(this.buttonTraditional, this.buttonNew);
@@ -86,7 +85,8 @@ public class DemoApp extends Application {
         this.chkTraditional.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                label.setText("traditional checkbox changed");
+                String message = newValue ? "Traditional checkbox checked" : "Traditional checkbox unchecked";
+                label.setText(message);
             }
         });
         this.flowGeneral.getChildren().add(this.chkTraditional);
